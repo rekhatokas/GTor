@@ -1,0 +1,31 @@
+GTor-1.0.1
+1 Jan 2014
+
+Zhenlong Yuan <yuanzhenlong1989@gmail.com>
+Yingfei Dong <yingfei@gmail.com>
+
+A pluggable transport for Tor that help a Tor client to connect a Tor relay/bridge via a Google web application. Note that current version of GTor have a limitation, user can only run GTor with a public IP address, as we have not implemented the Network Address Translator (NAT) function.
+
+1.Register for one Google account from https://accounts.google.com.
+
+2.Apply for an application on Google App Engine Platform on https://appengine.google.com.
+
+3.Enable the Socket service for your applied application on GAE platform and record the application ID.
+
+4.Download the GTor source code from https://github.com/zlyuan/GTor.
+
+5.Enter into the "upload" file in your download files and run the "uploader.bat", please pay attention to input your Google account and password and then input the application ID.
+
+6.Enter into the "client" file in your download files, change the line of "appid = gtor" as "appid = yourappid" in the file "proxy.ini" and then save it.
+
+7.Run the GTor.exe with an administrator authority.
+
+8.Download Tor-Browser from torproject.org and install it.
+
+9.Run the "Start Tor Browser.exe".
+
+10.Select to configure network settings and then select to use a proxy to access the Internet. Note that setting the Proxy Type as HTTP/HTTPS, Address as 127.0.0.1 and Port as 3333 (default port and you can change it as you like).
+
+11.Continue the next step and then input one available bridge relay. You can get some bridge relays by accessing the https server http://bridges.torproject.org/ or sending email to bridges@torproject.org with the subject is "get bridges". Note that this step is important and you should confirm the availability of the bridge node.
+
+12.Continue the next step and you can surf the Internet with anonymous access now.
